@@ -58,6 +58,7 @@ class MaskEditText @JvmOverloads constructor(
             maskChangedListener = watcher
         }
         super.addTextChangedListener(watcher)
+        if (watcher is MaskChangedListener) text = text
     }
 
     override fun onAttachedToWindow() {
